@@ -20,8 +20,7 @@ class BankAccount:
             return self
 
     def display_account_info(self):
-        print(self.balance)
-        # print(self.interest_rate)
+        print(f"Balance: ${self.balance}\nInterest Rate: {self.interest_rate}")
         return self
 
     def yield_interest(self):
