@@ -5,7 +5,7 @@ class BankAccount:
             self.interest_rate = float(interest_rate.strip("%"))/100
         else:
             self.interest_rate = interest_rate
-        print(self.interest_rate)
+        # print(self.interest_rate)
 
     def deposit(self, amount):
         self.balance += amount
@@ -21,7 +21,7 @@ class BankAccount:
 
     def display_account_info(self):
         print(self.balance)
-        print(self.interest_rate)
+        # print(self.interest_rate)
         return self
 
     def yield_interest(self):
@@ -35,13 +35,14 @@ class User:
     def __init__(self, name, email):
         self.name = name
         self.email = email
-        self.account = BankAccount(balance= 100, interest_rate= 0.02)
+        self.account = BankAccount(balance= 5, interest_rate= 0.02)
+        # print(self.account.balance)
 
         # other methods
 
     def make_deposit(self, amount):
         self.account.deposit(amount)
-        print(self.account.balance)
+        # print(self.account.balance)
 
     def make_withdrawal(self, amount):
         self.account.withdraw(amount)
@@ -53,12 +54,12 @@ class User:
 
 user1 = User("name", "hi@gmail.com")
 account1 = BankAccount(10, "1%")
-account2 = BankAccount(20, "2%")
+# account2 = BankAccount(20, "2%")
 
 account1.deposit(10).deposit(10).deposit(10).withdraw(10).yield_interest().display_account_info()
-account2.deposit(120).deposit(20).withdraw(5).withdraw(20).withdraw(10).withdraw(4).yield_interest().display_account_info()
+# account2.deposit(120).deposit(20).withdraw(5).withdraw(20).withdraw(10).withdraw(4).yield_interest().display_account_info()
 
 
-user1.make_deposit(201)
-user1.make_withdrawal(101)
+user1.make_deposit(200)
+user1.make_withdrawal(10)
 user1.display_user_balance()
